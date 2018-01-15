@@ -4,7 +4,7 @@ def main():
 
 	answer = "Y"
 
-	while (answer != "N"):
+	while (answer != "N"):#asks to start game
 
 		answer = input("Wanna play 'Rock Paper Scissors'? (Y or N) ")
 		if answer == "Y":
@@ -15,12 +15,14 @@ def main():
 		if answer == "N":
 			print("Oh.... ok")
 		else:
-			answer = "Y"
+			answer = "Y" #entry validation
 			print("That's not an answer!")
 		
 		
 def choose(choice):
-	x = random.randint(1,3)
+	x = random.randint(1,3) #this assigns the computers choice
+	
+	#Maybe make a separate print function to send information to?
 	if choice == "Rock" and x == 2:
 		print("Your opponent chose Paper. You lose!")
 	if choice == "Rock" and x == 1:
@@ -39,4 +41,4 @@ def choose(choice):
 		print("Your opponent also chose Rock. You win!")
 	if choice =="Paper" and x == 3:
 		print("Your opponent chose Scissors. You lose!")
-	return null
+	return null #This code can be cleaned and condensed
